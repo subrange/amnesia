@@ -29,6 +29,14 @@ pop sts = case sel sts of
       []     -> (Nothing, s) -- stack empty
       (x:xs) -> (Just x, update xs) -- pop head
 
+peek :: Stacks -> Maybe Int
+peek sts = case sel sts of
+  A -> peekAt (a sts)
+  B -> peekAt (b sts)
+  C -> peekAt (c sts)
+  where
+    peekAt []   = Nothing -- stack empty
+    peekAt(x:_) = Just x  -- get top value
 
 instance Show Stacks where
   show (Stacks a b c sel) =
@@ -38,9 +46,12 @@ main :: IO ()
 main = do
   let a = empty
   let b = push 10 a
-  let (v, c) = pop b
+  let c = empty
+  let d = push 5 c
+  let (v, k) = pop b
   print v
-  print c
+  print k
+  print (peek d)
   --args <- getArgs
   --case args of
   --  (filename:_) -> do
