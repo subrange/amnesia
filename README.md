@@ -22,3 +22,4 @@ cabal run amnesia -- <program.amn>
 
 I highly recommend watching:
 - [Haskell for Imperative Programmers](https://www.youtube.com/watch?v=Vgu82wiiZ90&list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV&index=1)
+- [Megaparsec tutorial](https://markkarpov.com/tutorial/megaparsec.html)
