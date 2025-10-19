@@ -2,22 +2,7 @@ module Main where
 
 import System.Environment (getArgs)
 import Stacks
-
-data Instr
-  = ChoA      -- select stack A
-  | ChoB      -- select stack B
-  | ChoC      -- select stack C
-  | Set Int   -- set selected stack to specific value
-  | Add       -- A = A + B
-  | Sub       -- A = A - B
-  | Mul       -- A = A * B
-  | Div       -- A = A / B
-  | Mod       -- A = A % B
-  | Nm        -- non-zero check
-  | Disp      -- print top of stack
-  | Open      -- ":" open bracket
-  | Close     -- ";" close bracket
-  deriving(Show, Eq)
+import Parser
 
 main :: IO ()
 main = do
