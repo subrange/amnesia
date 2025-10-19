@@ -1,3 +1,7 @@
-*.o
+dist
+dist-*
 *.hi
-amnesia
+*.o
+.DS_Store
+*.swp
+.vscode
